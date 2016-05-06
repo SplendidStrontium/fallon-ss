@@ -1,14 +1,15 @@
 {
   "name": "fallon_ss",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Online portal for Fallon Safety Services",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Paige Krsnak",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
+    "ejs": "^2.4.1",
     "express": "^4.13.4"
   }
 }
