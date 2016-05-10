@@ -1,14 +1,39 @@
 var express = require('express');
-var path = require('path');
 var app = express();
+var path = require('path');
+var port = process.env.PORT || 8080;
+var router = express.Router();
 
-app.set('views', __dirname + '/public/views');
-app.set('view engine', 'ejs');
+app.use(express.static(__dirname + '/public'));
 
-app.get('/', function (req, res) {
-	res.sendFile(__dirname + '/public/views/index.html');
+// 
+// ============================================
+
+router.use(function(req, res, next) {
+	console.log(req.method, req.url);
+	next();
 });
 
-app.listen(3000, function () {
-	console.log('Example app listening on port 3000');
+// ROUTES
+// ==============================================
+
+app.route('/')
+	.get(function(req, res) {
+		res.sendFile('/views/index.html');
+});
+
+app.route('/about')
+	.get(function(req, res) {
+		res.send('what about me');
+});
+
+app.route('/login')
+	.get(function(req, res) {
+		res.send('this is the login form');
+});
+
+app.use('/', router);
+
+app.listen(port, function () {
+	console.log('Example app listening on port %s', port);
 });
