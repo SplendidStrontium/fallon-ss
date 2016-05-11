@@ -20,7 +20,7 @@ router.use(function(req, res, next) {
 
 app.route('/')
 	.get(function(req, res) {
-		var html = jade.renderFile('./public/views/index.jade');
+		var html = jade.renderFile('./public/views/index.jade', {pretty: true});
 		res.send(html);
 });
 

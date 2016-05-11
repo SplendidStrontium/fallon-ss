@@ -17,3 +17,8 @@ nav#hmnav {
 #hmnav li a {
 	padding: 12px;
 }
+
+#logoimg {
+	z-index: -1;
+	position: absolute;
+}

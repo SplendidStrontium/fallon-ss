@@ -2,13 +2,13 @@ doctype html
 html(lang="en")
   head
     title= FallonHome
-    style
-      include ../css/home.css
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='../css/home.css')
   body
-    h1 Heya
     #container
-    include ./navbar.jade
-    p.
-      Jade is simple and confusing at the same time.
-    include ./footer.jade
+      include ./navbar.jade
+      #mycontent
+        h1 Intro
+        p Jade is simple and confusing at the same time.
+      include ./footer.jade
 
