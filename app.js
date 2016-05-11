@@ -3,6 +3,7 @@ var app = express();
 var path = require('path');
 var port = process.env.PORT || 8080;
 var router = express.Router();
+var jade = require('jade');
 
 app.use(express.static(__dirname + '/public'));
 
@@ -19,12 +20,14 @@ router.use(function(req, res, next) {
 
 app.route('/')
 	.get(function(req, res) {
-		res.sendFile('/views/index.html');
+		var html = jade.renderFile('./public/views/index.jade');
+		res.send(html);
 });
 
 app.route('/about')
 	.get(function(req, res) {
-		res.send('what about me');
+		var html = jade.renderFile('./public/views/about.jade');
+		res.send(html);
 });
 
 app.route('/login')

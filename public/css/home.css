@@ -1,0 +1,19 @@
+body {
+	background-color: yellow;
+}
+
+#container {
+	color: red;
+}
+
+nav#hmnav {
+	list-style-type: none;
+}
+
+#hmnav li {
+	display: inline-block;
+}
+
+#hmnav li a {
+	padding: 12px;
+}
