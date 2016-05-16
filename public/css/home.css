@@ -4,14 +4,20 @@ body {
 
 #container {
 	color: red;
+	padding-top: 90px;
 }
 
 nav#hmnav {
 	list-style-type: none;
+	border: 1px solid black;
+	position: absolute;
+	top: 73px;
 }
 
 #hmnav li {
 	display: inline-block;
+	border: 1px solid black;
+	margin: 1px 4px 1px 4px;
 }
 
 #hmnav li a {
@@ -21,4 +27,15 @@ nav#hmnav {
 #logoimg {
 	z-index: -1;
 	position: absolute;
+	top: 10px;
+}
+
+#logobr{
+	border: 0;
+	height: 1px;
+	background: #333;
+	background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+	background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+	background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+	background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
 }
