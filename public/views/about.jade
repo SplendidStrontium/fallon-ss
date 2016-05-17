@@ -1,13 +1,7 @@
-doctype html
-html(lang="en")
-  head
-    title= FallonAbout
-    link(rel='stylesheet', href='../css/home.css')
-  body
-    #container
-      include ./navbar.jade
-      #mycontent
-        p Whats this all about?
-        iframe(width="560" height="315" src="https://www.youtube.com/embed/myTPRdlYveA" frameborder="0" allowfullscreen)
-      include ./footer.jade
+extends ./layout.jade
+
+block content
+	h1 Watch our preview video:
+	iframe(width="560" height="315" src="https://www.youtube.com/embed/myTPRdlYveA" frameborder="0" allowfullscreen)
+
 

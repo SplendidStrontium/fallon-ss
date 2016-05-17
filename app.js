@@ -32,7 +32,8 @@ app.route('/about')
 
 app.route('/login')
 	.get(function(req, res) {
-		res.send('this is the login form');
+		var html = jade.renderFile('./public/views/login.jade');
+		res.send(html);
 });
 
 app.use('/', router);

@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+  head
+    title= FallonHome
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='../css/home.css')
+  body
+    #container
+      block navbar
+        img(src='../images/fsstoptxt.gif')#logoimg
+        hr#logobr
+        nav#hmnav
+          li
+            a(href="/") Home
+          li
+            a(href="/about") About
+          li
+            a(href="/login") Login
+      block content
+      block footer
+        #footer
+          hr#footbr
+          p Copyright (c) Fallon Safety Systems
+
